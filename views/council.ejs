@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/styles.css">
+  <title>Fetch using MySQL and Node.js</title>
+</head>
+<body>
+    <div id="home2" style="display: none;">
+    <header> 
+        <img src="/logo.png" alt="" id="logo">
+        <ul>
+            <a id="self">My Sessions</a>
+            <a href='/login/logout' id="about">Log Out</a>
+        </ul>
+    </header>
+    <div class="table-data">
+<h1 style=" text-align: center;">Counsellor Details</h1>
+    <table border="1">
+        <tr>
+            <th>S.N</th>
+            <th>Full Name</th>
+            <th>Email Address</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        
+        <%
+        if(userData.length!=0){
+        var i=1;
+        userData.forEach(function(data){
+        %>
+        <tr>
+            <td><%=i; %></td>
+            <td><%=data.Name %></td>
+            <td><%=data.Password %></td>
+            <!-- <td><%=data.city %></td>
+            <td><%=data.country %></td> -->
+            <td><a href="/users/edit/<%=data.Name%>" style="color:blue;">Edit</a></td>
+            <td><a href="/users/delete/<%=data.Name%>">Delete</a></td>
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    </div>
+</div>
+<div id="home1">
+    <header> 
+        <img src="/logo.png" alt="" id="logo">
+        <ul>
+            <a id="self">Self Care</a>
+            <a href='#' id="about">About us</a>
+        </ul>
+    </header>
+    <div class="container">
+        <img src="/mainbc..jpg" id="f" alt="">
+        <ul class="formlink">
+            <a onclick="myfunction1()" class="btn">Sign up</a>
+            <a onclick="myfunction()" class="btn">Login</a>
+        </ul>
+    </div>
+    <div class="login-container" id="l" style="display:none">
+        <form action="/login/loginuser" method="Post">
+            <h1>LOGIN</h1>
+            <div>
+                <label>Username</label>
+                <input type="text" name="username" placeholder="Enter your username here" value="">
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Enter your password here" value="">
+            </div>
+            <input type="submit" name="login" value="LOGIN">
+        </form>
+    </div>
+    <div class="login-container" id="logininnow" style="height:100px; width:200px;display: none;" >
+        <div>
+                <label>You can login now</label>
+        </div>
+    </div>
+    <div class="login-container" id="s" style="display:none">
+        <form action="/auth/register" method="Post">
+            <h1>SIGNUP</h1>
+            <div>
+                <label>Username</label>
+                <input type="text" name="username" placeholder="Enter your username here" value="">
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Enter your email here" value="">
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Enter your password here" value="">
+            </div>
+            <div>
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password" placeholder="Enter your password here" value="">
+            </div>
+            <input type="submit" name="login" value="REGISTER">
+            <h4 id="new" style="color:red"><%=message%></h4>
+        </form>
+       
+    </div>
+    <script>
+        let page2= '<%-page2%>';
+        let message='<%-message%>';
+        let okay='<%-okay%>';
+        let userData='<%-userData%>'
+        if(userData!='')
+        {
+            var x=document.getElementById("home2");
+            var y=document.getElementById("home1");
+            y.style.display='none';
+            x.style.display='block';
+        }
+        else
+        {
+            var x=document.getElementById("home2");
+            var y=document.getElementById("home1");
+            x.style.display='none';
+            y.style.display='block';
+        }
+        var ln = document.getElementById("logininnow");
+        function demo()
+        {
+            setTimeout(function(){ ln.style.display ="block" },0);
+            setTimeout(function(){ ln.style.display = "none"}, 1500);  
+        }
+         var x = document.getElementById("s");
+         var kk=document.getElementById("new");
+        // if (page2!=''){ 
+       
+        //     photo=document.getElementById("f");
+        //     photo.style.display = "none";
+        //     w=document.getElementById("self");
+        //     w.innerHTML="<h4>{{username}}<h4>";
+        //     n=document.getElementById("about");
+        //     n.innerHTML="logout";
+        //     n.href="\logout";
+        // }
+        if (message!='')   { 
+             if (x.style.display == "none")
+                x.style.display = "block";
+        }
+        if(okay!=''){ 
+         demo();
+         kk.innerHTML="";
+         if (x.style.display == "block")
+                x.style.display = "none";
+        }
+         function myfunction(){
+        var x=document.getElementById("l");
+        var y=document.getElementById("f");
+        if(x.style.display=="block")
+        {
+            x.style.display="none";
+            y.style.opacity="1";
+        }
+        else
+        { 
+        x.style.display="block";
+        y.style.opacity="0.8";
+        }
+        var x=document.getElementById("s");
+        if(x.style.display=="block")
+        {
+            x.style.display="none";
+        }
+
+    };
+    function myfunction1(){
+        var x=document.getElementById("s");
+        var y=document.getElementById("f");
+        if(x.style.display=="block")
+        {
+            x.style.display="none";
+            y.style.opacity="1";
+        }
+        else
+        { 
+        x.style.display="block";
+        y.style.opacity="0.8";
+        }
+        var x=document.getElementById("l");
+        if(x.style.display=="block")
+        {
+            x.style.display="none";
+        }}
+        function lg() {
+            var x = document.getElementById("l");
+            if (x.style.display == "block")
+                x.style.display = "none";
+            else
+                x.style.display = "block";
+        }
+        function signup() {
+            var x = document.getElementById("s");
+            if (x.style.display == "block")
+                x.style.display = "none";
+            else
+                x.style.display = "block";
+        }
+    </script>
+</div>
+</body>
+</html>

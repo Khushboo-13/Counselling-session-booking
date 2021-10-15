@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+
+<body>
+     <header> 
+        <img src="/logo.png" alt="" id="logo">
+        <ul>
+            <a id="self">Self Care</a>
+            <a href='#' id="about">About us</a>
+        </ul>
+    </header>
+    <div class="container">
+        <img src="/mainbc..jpg" id="f" alt="">
+        <ul class="formlink">
+            <a onclick="myfunction1()" class="btn">Sign up</a>
+            <a onclick="myfunction()" class="btn">Login</a>
+        </ul>
+    </div>
+    <div class="login-container" id="l" style="display:none">
+        <form action="/login/loginuser" method="Post">
+            <h1>LOGIN</h1>
+            <div>
+                <label>Username</label>
+                <input type="text" name="username" placeholder="Enter your username here" value="">
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Enter your password here" value="">
+            </div>
+            <input type="submit" name="login" value="LOGIN">
+        </form>
+    </div>
+    <div class="login-container" id="logininnow" style="height:100px; width:200px;display: none;" >
+        <div>
+                <label>You can login now</label>
+        </div>
+    </div>
+    <div class="login-container" id="s" style="display:none">
+        <form action="/auth/register" method="Post">
+            <h1>SIGNUP</h1>
+            <div>
+                <label>Username</label>
+                <input type="text" name="username" placeholder="Enter your username here" value="">
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Enter your email here" value="">
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Enter your password here" value="">
+            </div>
+            <div>
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password" placeholder="Enter your password here" value="">
+            </div>
+            <input type="submit" name="login" value="REGISTER">
+            <h4 id="new" style="color:red">{{message}}</h4>
+        </form>
+       
+    </div>
+    <script>
+         var ln = document.getElementById("logininnow");
+        function demo()
+        {
+            setTimeout(function(){ ln.style.display ="block" },0);
+            setTimeout(function(){ ln.style.display = "none"}, 1500);  
+        }
+         var x = document.getElementById("s");
+         kk=document.getElementById("new");
+         {{#if page2}}
+         { 
+            photo=document.getElementById("f");
+            photo.style.display = "none";
+            w=document.getElementById("self");
+            w.innerHTML="<h4>{{username}}<h4>";
+            n=document.getElementById("about");
+            n.innerHTML="logout";
+            n.href="\logout";
+         }
+        {{/if }}
+         {{#if message}}
+             if (x.style.display == "none")
+                x.style.display = "block";
+        {{/if }}
+        {{#if okay}}
+         demo();
+         kk.innerHTML="";
+         if (x.style.display == "block")
+                x.style.display = "none";
+         {{/if }}
+         function myfunction(){
+        var x=document.getElementById("l");
+        var y=document.getElementById("f");
+        if(x.style.display=="block")
+        {
+            x.style.display="none";
+            y.style.opacity="1";
+        }
+        else
+        { 
+        x.style.display="block";
+        y.style.opacity="0.8";
+        }
+        var x=document.getElementById("s");
+        if(x.style.display=="block")
+        {
+            x.style.display="none";
+        }
+
+    };
+    function myfunction1(){
+        var x=document.getElementById("s");
+        var y=document.getElementById("f");
+        if(x.style.display=="block")
+        {
+            x.style.display="none";
+            y.style.opacity="1";
+        }
+        else
+        { 
+        x.style.display="block";
+        y.style.opacity="0.8";
+        }
+        var x=document.getElementById("l");
+        if(x.style.display=="block")
+        {
+            x.style.display="none";
+        }}
+        function lg() {
+            var x = document.getElementById("l");
+            if (x.style.display == "block")
+                x.style.display = "none";
+            else
+                x.style.display = "block";
+        }
+        function signup() {
+            var x = document.getElementById("s");
+            if (x.style.display == "block")
+                x.style.display = "none";
+            else
+                x.style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

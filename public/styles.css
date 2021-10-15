@@ -1,0 +1,578 @@
+
+/* Desktop - 1*/
+*{ 
+    margin: 0px;
+    padding: 0px;
+    }
+    
+    *{
+        margin:0px;
+        padding:0px;
+    }
+    #home2{
+        background: #66a4c3;
+        padding: 10px 60px;
+        font-family: 'Noto Sans', sans-serif;
+      }
+      #logo{
+        height: 125%;
+        width: 8%;
+    }
+    header{ 
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between;
+        height: 60px;
+        }
+    ul{
+        display: flex;
+        flex-direction: row;
+        padding-top: 5px;
+       
+    }
+      #about{
+        position: relative;
+        list-style: none;
+        padding: 20px;
+        margin-right: 10px;
+        color:#f2fbec ;
+        border: 2px solid black;
+        background-color: #1c3355;
+    }
+    #about:hover {
+        background-color:black;
+    }
+    #self{
+        position: relative;
+        list-style: none;
+        padding: 20px;
+        margin-right: 10px;
+        color:#f2fbec ;
+        border: 2px solid black;
+        background-color: #1c3355;
+    }
+    #self:hover {
+        background-color:black;
+    }
+      table {
+        width: 100%;
+        margin: 40px 0;
+        font-size: 1rem;
+        color: #333;
+        font-weight: 700;
+        border: 1px solid #333;
+        background-color: #fff;
+        text-align: center;
+        border-collapse: separate;
+        border-spacing: 0;
+        border-radius: 15px;
+        overflow: hidden;
+      }
+      tr th{
+          color: #fff;
+      }
+        td,
+        th {
+          padding: .5em;
+          height: 60px;
+          vertical-align: middle;
+          border-right: 1px solid #1c3355;
+          border-bottom: 1px solid #1c3355;
+        }
+      
+        th {
+          background: #1c3355;
+        }
+      
+        td {
+          background: #f2fbec;
+        }
+      
+        thead {
+          background-color: #333;
+        }
+      
+        thead 
+          th {
+            color: #f2fbec;
+            font-size: 2rem;
+            letter-spacing: .2em;
+          }
+      
+        tbody tr 
+              td,
+              th {
+                border-bottom: none;
+              }
+            
+          
+        
+      
+    .login-container{
+        width: 370px;
+        height: 400px;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        background: #000;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        color: #fff;
+        padding: 40px 20px;
+    }
+    
+    .login-container img{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: calc(50% - 50px);
+        border-radius: 50%;
+        top: -50px;
+    }
+    
+    .login-container h1{
+        text-align: center;
+        font-size: 20px;
+        background: transparent;
+    }
+    
+    .login-container label{
+        display: block;
+    }
+    
+    .login-container div{
+        margin-bottom: 20px;
+        background: transparent;
+    }
+    
+    .login-container input[type="text"], input[type="password"]{
+        width: 100%;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #ffff;
+        background: transparent;
+        color: #ffff;
+        height: 40px;
+    }
+    .login-container input[type="email"], input[type="password"]{
+        width: 100%;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #ffff;
+        background: transparent;
+        color: #ffff;
+        height: 40px;
+    }
+    .login-container input[type="submit"]{
+        width: 100%;
+        border: none;
+        outline: none;
+        height: 40px;
+        background-image: linear-gradient(to right,#F26FC9, #8772EF);
+        color: #ffff;
+        
+    }
+    .login-container input[type="submit"]:hover{
+        cursor: pointer;
+        box-shadow: 1px 1px 10px #696969;
+    }
+    #f{
+        position: absolute;
+        top: 75px;
+        width: 100%;
+        height: 520px;
+    }
+    .formlink {
+        list-style: none;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        top: 400px;
+        padding-top:0px;
+        background-color: transparent;
+        justify-content: flex-start;
+        margin-right: 100px;
+    }
+    .btn{
+        position: relative;
+        justify-content: space-between;
+        background-color: #1c3355;
+        text-decoration: none;
+        color: rgb(243, 235, 235);
+        border-radius:5px;
+        padding: 20px;
+        margin-left: 15px;
+       
+        /* margin-left: 700px; */
+       
+    }
+    /* photo2 2 */
+    /* 
+    {  position: relative; 
+    width: 1256px;
+    height: 556px;
+    left: -14px;
+    top: 0px;
+    background-position: center;
+    }  */
+    /* logo 1 */
+    
+    /* header{position: absolute;
+    width: 184px;
+    height: 88px;
+    left: 0px;
+    top: -5px;
+    
+    background: url(logo.jpg); 
+    } */
+    
+    
+    
+    /* Frame 1 */
+    #logo{
+        height: 125%;
+        width: 8%;
+    }
+    header{ 
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between;
+        height: 60px;
+        }
+    ul{
+        display: flex;
+        flex-direction: row;
+        padding-top: 5px;
+       
+    }
+    #about{
+        position: relative;
+        list-style: none;
+        padding: 20px;
+        margin-right: 10px;
+        color:#f2fbec ;
+        border: 2px solid black;
+        background-color: #1c3355;
+    }
+    #about:hover {
+        background-color:black;
+    }
+    #self{
+        position: relative;
+        list-style: none;
+        padding: 20px;
+        margin-right: 10px;
+        color:#f2fbec ;
+        border: 2px solid black;
+        background-color: #1c3355;
+    }
+    #self:hover {
+        background-color:black;
+    }
+    .Second{
+        margin-top: 550px;
+    }
+    #p3{
+      
+       width: 100%;
+    }
+    
+    /* ul{ 
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start;
+    padding: 20px;
+    
+    position: relative;
+    width: 166px;
+    height: 66px;
+    right: 288px;
+    } */
+    
+    
+    /* Self care */
+    
+    /* identical to box height */
+    /* 
+    color: #000000;
+    
+    transform: rotate(1.16deg); */
+    
+    /* Inside Auto Layout */
+    /* flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px; */
+    
+    
+    /* Frame 2 */
+    
+    /* Auto Layout */
+    /* display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    
+    position: absolute;
+    width: 208px;
+    height: 63px;
+    left: 1182px;
+    top: 14px;
+    
+    background: #FCC4A5; */
+    
+    
+    /* A */
+    
+    /* position: static;
+    width: 155px;
+    height: 33px;
+    left: 10px;
+    top: 10px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px; */
+    /* identical to box height */
+    
+    /* color: #000000;
+    
+    
+    /* Inside Auto Layout */
+    /*flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px; */
+    
+    
+    /* Why you should take care of your mental health */
+    
+    /* position: absolute;
+    width: 1046px;
+    height: 126px;
+    left: 66px;
+    top: 234px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 63px;
+    text-transform: uppercase;
+    
+    color: #FCC4A5;
+    
+    border: 2px solid #000000; */
+    
+    
+    /*  Boost our resilence. Reach our highest potential. Have basic social skill Empathize with other */
+    
+    /* position: absolute;
+    width: 935px;
+    height: 224px;
+    left: 91px;
+    top: 487px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;
+    font-feature-settings: 'cpsp' on;
+    
+    color: #000000; */
+    
+    
+    
+    /* Positive mental health allows us to: */
+    
+    /* position: absolute;
+    width: 707px;
+    height: 62px;
+    left: 98px;
+    top: 408px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 42px;
+    
+    color: #000000; */
+    
+    
+    
+    /* Book your first session with a mental health counsellor */
+    
+    /* position: absolute;
+    width: 596px;
+    height: 175px;
+    left: 118px;
+    top: 743px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 43px;
+    line-height: 50px;
+    
+    color: #000000; */
+    
+    
+    
+    /* Frame 3 */
+    
+    /* Auto Layout */
+    /* display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    
+    position: absolute;
+    width: 174px;
+    height: 70px;
+    left: calc(50% - 174px/2 + 305px);
+    bottom: 171px;
+    
+    background: #0E1010; */
+    
+    
+    /* Sign up */
+    
+    /* position: static;
+    width: 147px;
+    height: 50px;
+    left: 10px;
+    top: 10px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 43px;
+    line-height: 50px;
+    
+    color: #FDDFC7; */
+    
+    
+    /* Inside Auto Layout */
+    /* flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px; */
+    
+    
+    /* Frame 4 */
+    
+    /* Auto Layout */
+    /* display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    
+    position: absolute;
+    width: 156px;
+    height: 74px;
+    right: 102px;
+    top: 777px;
+    
+    background: #1F2324; */
+    
+    
+    /* Login */
+    
+    /* position: static;
+    width: 141px;
+    height: 43px;
+    left: 10px;
+    top: 10px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 43px;
+    line-height: 50px;
+    
+    color: #FDDFC7; */
+    
+    
+    /* Inside Auto Layout */
+    /*flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px; */
+    
+.login-container{
+    width: 370px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    background: #000;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    color: #fff;
+    padding: 40px 20px;
+}
+#s{
+    height: 500px;
+}
+.login-container img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: calc(50% - 50px);
+    border-radius: 50%;
+    top: -50px;
+}
+
+.login-container h1{
+    text-align: center;
+    font-size: 20px;
+}
+
+.login-container label{
+    display: block;
+}
+
+.login-container div{
+    margin-bottom: 20px;
+}
+
+.login-container input[type="text"], input[type="password"],input[type="email"]{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ffff;
+    background: transparent;
+    color: #ffff;
+    height: 40px;
+}
+
+.login-container input[type="submit"]{
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 40px;
+    background-image: linear-gradient(to right,#F26FC9, #8772EF);
+    color: #ffff;
+    
+}
+.login-container input[type="submit"]:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 10px #696969;
+}
+a{
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+a:hover{
+    color: #d3d3d3;
+    
+}
